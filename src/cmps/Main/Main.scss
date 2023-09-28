@@ -1,0 +1,66 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+  flex-direction: column;
+  position: relative;
+  .user-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #fdcb6e;
+    background-color: #fff4d1;
+    display: flex;
+    img {
+      border-radius: 50%;
+      border: 4px solid #fdcb6e;
+      margin-right: 10px;
+    }
+    .user-informatin {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .name {
+      color: #fdcb6e;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .email {
+      font-style: italic;
+    }
+  }
+  .add-btn {
+    position: absolute;
+    align-self: flex-end;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: aquamarine;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 1px solid;
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+    &.disabled {
+      opacity: 0.2;
+      cursor: not-allowed;
+    }
+    &:not(.disabled) {
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        opacity: 1;
+      }
+    }
+  }
+}
